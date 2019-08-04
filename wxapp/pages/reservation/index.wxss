@@ -1,0 +1,27 @@
+.canlendarBgView{display:flex;flex-grow:1;flex-direction:column;align-items:center;position: fixed;top: 0;background: white;box-shadow: 0 10px 10px rgb(255,255,255);z-index: 1;}
+.canlendarView{display:flex;color:#47a7dd;flex-direction:column;}
+.canlendarTopView{display:flex;height:80rpx;font-size:32rpx;flex-direction:row;align-items:center;justify-content:center;font-weight: 600;}
+.leftBgView{display:flex;height:80rpx;text-align:right;flex-direction:row-reverse;}
+.leftView{display:flex;width:80rpx;height:100%;flex-direction:row;align-items:center;justify-content:center;}
+.centerView{display:flex;width:50%;height:80rpx;text-align:center;flex-direction:row;align-items:center;justify-content:center;}
+.rightBgView{display:flex;height:80rpx;flex-direction:row;}
+.rightView{display:flex;width:80rpx;height:100%;flex-direction:row;align-items:center;justify-content:center;}
+.weekBgView{display:flex;height:50rpx;line-height:50rpx;opacity:.5;flex-direction:row;justify-content:center;align-items:center;}
+.weekView{text-align:center;font-size:28rpx;flex-grow:1;}
+.dateBgView{display:flex;height:500rpx;flex-direction:row;flex-wrap:wrap;}
+.dateEmptyView{display:flex;width:107.1428571429rpx;color:#fff;align-items:center;justify-content:center;}
+.dateView{display:flex;width:107.1428571429rpx;color:#fff;align-items:center;justify-content:center;}
+.datesView{display:flex;width:60rpx;height:60rpx;color:#47a7dd;font-size:30rpx;align-items:center;justify-content:center;line-height: 1;}
+.todayView,.dateSelectView,.ordering{position:relative;top:0;left:0;border-radius:50%;}
+.todayView{background: #eee;}
+.dateSelectView{background-color: #1c7add;color:#fff;}
+.ordering{position:relative;top:0;left:0;border-radius:50%;background-color: #df2a47;color:#fff;}
+
+.ordering-lists{padding: 370px 24rpx 30rpx;min-height: 100vh;box-sizing: border-box;}
+.ordering-item{background: white;border-radius: 6rpx;box-shadow: 0 0 10px rgba(0,0,0,0.1);padding: 0 40rpx;height: 100rpx;line-height: 100rpx;font-size: 32rpx;color: #333;position: relative;margin-bottom: 30rpx;transition: all 0.3s;}
+.ordering-item.animated{animation: translate 0.4s;}
+@keyframes translate {from{transform: translateY(80%)} to{transform: translateY(0%)}}
+.ordering-item::before{content: "";position: absolute;left: 0;top: 0;bottom: 0;width: 12rpx;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;background: #ff7e00;}
+
+.btn-add{width: 90rpx;height: 90rpx;line-height: 90rpx;border-radius: 50%;background: #dd3e41;color: white;font-size: 30px;text-align: center;position: fixed;bottom: 18vh;right: 40rpx;}
+.delete{font-size: 30rpx;margin-top: 20rpx;color: #ff7e00;}

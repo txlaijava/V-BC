@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.shopping.framework</groupId>
+    <artifactId>framework-project</artifactId>
+    <version>1.0.0.RELEASE</version>
+    <packaging>pom</packaging>
+    <name>framework Project</name>
+
+    <!--<parent>-->
+        <!--<groupId>com.bigdatan.parent</groupId>-->
+        <!--<artifactId>parent-project</artifactId>-->
+        <!--<version>1.0.0.RELEASE</version>-->
+        <!--<relativePath>../parent/pom.xml</relativePath>-->
+    <!--</parent>-->
+    <modules>
+        <module>spring-boot-starter-druid</module>
+        <module>spring-boot-starter-DynamicDruid</module>
+        <module>spring-boot-starter-swagger</module>
+        <module>spring-boot-starter-redis</module>
+        <module>spring-boot-starter-oss</module>
+        <module>spring-boot-starter-token</module>
+        <module>spring-boot-starter-sms</module>
+        <module>spring-boot-starter-applicationContext</module>
+        <module>spring-boot-starter-mq</module>
+    </modules>
+</project>

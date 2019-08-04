@@ -1,0 +1,39 @@
+/* .container{padding: 24rpx;min-height: 100vh;box-sizing: border-box;} */
+.header{padding: 30rpx 24rpx 46rpx;}
+.user-info{font-size: 30rpx;}
+.user-info .user-branch{font-size: 24rpx;color: #999;margin-left: 8px;}
+.today{font-size: 26rpx;color: #999;}
+.icon-clander{width: 30rpx;margin-right: 14rpx;}
+
+.swiper{width: 702rpx;height: 300rpx;border-radius: 10rpx;overflow: hidden;margin: 0 auto;}
+.swiper image{width: 100%;height:100%; }
+
+.btn-wrap{padding: 66rpx 24rpx;}
+.btn-meal{justify-content: center;align-items: center;background: #d7242d !important;line-height: 1;height: 100rpx;border-radius: 90rpx;box-shadow: 0 4px 12px rgba(215,36,45,0.6);}
+.btn-meal::after{border: 0 !important;}
+.btn-meal image{width: 32rpx;margin-right: 20rpx;}
+button.btn-meal[disabled] image,.button-hover image{opacity: 0.5;}
+button.btn-meal[disabled] {opacity: 0.8;}
+
+.cbtn-meal{justify-content: center;align-items: center;background: #d7242d !important;line-height: 1;height: 100rpx;border-radius: 90rpx;box-shadow: 0 4px 12px rgba(215,36,45,0.6);opacity: 0.6;}
+.cbtn-meal::after{border: 0 !important;}
+.cbtn-meal image{width: 32rpx;margin-right: 20rpx;}
+
+.btn-title{font-size: 32rpx;}
+.btn-subtitle{font-size: 20rpx;margin-top: 2px;}
+
+.count-down{flex-direction: column;align-items: center;padding: 30rpx 0;}
+.count-down__title{position: relative;color: #999999;font-size: 34rpx;}
+.count-down__title::after,.count-down__title::before{content: "";position: absolute;top: 24rpx;height: 1px;width: 120rpx;background: #999;}
+.count-down__title::before{left: -160rpx;}
+.count-down__title::after{right: -160rpx;}
+.count-down__content{font-size: 100rpx;color: #ff7e00;line-height: 1;padding: 50rpx 0 30rpx;font-family: Arial !important;}
+.count-down__desc text{font-size: 34rpx;color: #cccccc;padding: 0 82rpx;}
+
+
+/* 授权弹窗 */
+.ep-content{width: 600rpx;height: 770rpx;padding: 40rpx 50rpx;box-sizing: border-box;background: white;border-radius: 10rpx;text-align: center;}
+.ep-tit{font-size: 32rpx;color: black;margin: 30rpx 0;line-height: 1;}
+.ep-subtit{font-size: 28rpx;color: #666;margin-bottom: 20rpx;display: block;}
+.ep-img{width: 482rpx;height: 373rpx;margin: 0 auto 16rpx;display: block;}
+.btn-primary{background: #d7242d;color: white;border-radius: 46px;}

@@ -1,0 +1,20 @@
+# 忽略IDEA文件
+.idea
+# 忽略class
+.classpath
+.project
+*.iml
+*.eml
+target
+*.log
+*.log.*
+generatorConfig.xml
+.DS_Store
+*.cache
+*.lock
+
+# 忽略out文件夹
+/out/
+/files/
+
+# 忽略config

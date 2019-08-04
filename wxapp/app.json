@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/reservation/index",
+        "pages/statistics/index",
+        "pages/user-info/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "红商集团报餐",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar":{
+        "color": "#666666",
+        "selectedColor": "#ff7e00",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "black",
+        "list":[
+            {
+                "pagePath":"pages/index/index",
+                "iconPath":"images/icon/icon-ordering.png",
+                "selectedIconPath":"images/icon/icon-ordering__on.png",
+                "text":"报餐"
+            },{
+                "pagePath": "pages/reservation/index",
+                "iconPath": "images/icon/icon-reservation.png",
+                "selectedIconPath": "images/icon/icon-reservation__on.png",
+                "text": "预订"
+            },{
+                "pagePath": "pages/statistics/index",
+                "iconPath": "images/icon/icon-statistics.png",
+                "selectedIconPath": "images/icon/icon-statistics__on.png",
+                "text": "统计"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

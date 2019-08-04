@@ -1,0 +1,50 @@
+<view class="container">
+    <view class="header flex">
+        <view class="user-info flex-item">
+            <text>{{timeSlot}},</text>
+            <text>{{nickName}}</text>
+            <text class="user-branch">{{userDepartmentName}}</text>
+        </view>
+        <view class="today flex">
+            <image class="icon-clander" src="../../images/icon/icon-clander.png" lazy-load mode="widthFix" />
+            <text>{{cur_year}}年{{cur_month}}月{{cur_day}}日</text>
+        </view>
+    </view>
+
+    <swiper class="swiper" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#ffffff" autoplay="true" circular='true' interval='5000' duration='1000'>
+       <block wx:for="{{imgUrlList}}" wx:key="*this" wx:for-index="idx">
+             <swiper-item>
+                <image src="{{item.imgUrl}}" mode="aspectFill" bindtap="clickSwiper" data-url="{{item.imgLink}}"/>
+             </swiper-item>
+       </block>  
+    </swiper>
+
+    <view class="btn-wrap">
+        <button class="flex  {{select==0?'btn-meal':'cbtn-meal'}}" type="primary" disabled='{{disabled}}' bindtap="openToast">
+            <image src="../../images/icon/icon-tableware.png" mode="widthFix"/>
+            <view>
+                <view class="btn-title">{{mealOffer}}</view>
+                <view class="btn-subtitle">Began To Eat</view>
+            </view>
+        </button>
+    </view>
+
+    <view class="count-down flex">
+        <view class="count-down__title">报 餐 倒 计 时</view>
+        <!-- <view class="count-down__content">01 : 50 : 23</view> -->
+        <view class="count-down__content">{{clock}}</view>
+        <view class="count-down__desc"><text>H</text><text>M</text><text>S</text></view>
+    </view>
+</view>
+
+
+<!-- 授权弹窗 -->
+<view class="popup empower" hidden="{{!isShowEmpower}}">
+    <view class="mask"></view>
+    <view class="ep-content popup-box {{animated ? 'animated' : ''}}">
+        <view class="ep-tit t-center">需要您的授权</view>
+        <text class="ep-subtit t-center">为了提供更好的服务\n请在稍后的提示框中点击“允许”</text>
+        <image class="ep-img" src="http://img.rblcmall.com/wxapp/images/empower.png"></image>
+        <button class="btn btn-primary btn-confirm" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="clickEmpower" >我知道了</button>
+    </view>
+</view>

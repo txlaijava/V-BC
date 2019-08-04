@@ -1,0 +1,7 @@
+.flex{display: flex;align-items: center;}
+.flex-item{flex: 1;}
+
+.popup{position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;}
+.mask{width: 100vw;height: 100vh;background: rgba(0,0,0,0.7);}
+.popup-box{position: fixed;top: 50%;left: 0;right: 0;margin: 0 auto;transform: translateY(100%);transition: all 0.3s;}
+.popup-box.animated{transform: translateY(-50%);}

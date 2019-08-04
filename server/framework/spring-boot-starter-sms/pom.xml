@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.shopping.framework</groupId>
+    <artifactId>spring-boot-starter-sms</artifactId>
+    <version>1.0.0.RELEASE</version>
+    <packaging>jar</packaging>
+    <name> rblc Components SMS</name>
+    <description>消息模块,包含短信消息、推送、邮件</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <file.encoding>UTF-8</file.encoding>
+        <shopping-rblc.version>1.0.0.RELEASE</shopping-rblc.version>
+    </properties>
+    <parent>
+        <groupId>com.shopping.parent</groupId>
+        <artifactId>parent-project</artifactId>
+        <version>1.0.0.RELEASE</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.shopping.base</groupId>
+            <artifactId>base-project</artifactId>
+            <version>${shopping-rblc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.39</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.quhaodian</groupId>
+            <artifactId>plug_alidayu</artifactId>
+            <version>1.2.0</version>
+            <!-- 忽略冲突的包 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>com.quhaodian</groupId>
+                    <artifactId>plug</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- 极光推送 -->
+        <dependency>
+            <groupId>cn.jpush.api</groupId>
+            <artifactId>jiguang-common</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.jpush.api</groupId>
+            <artifactId>jpush-client</artifactId>
+            <version>3.3.7</version>
+        </dependency>
+    </dependencies>
+</project>

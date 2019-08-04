@@ -1,0 +1,132 @@
+#mybatis:
+#    mapper-locations: classpath:mapper/**/*.xml
+
+mapper:
+    not-empty: false
+    identity: MYSQL
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+
+druid:
+    url: jdbc:mysql://localhost:3306/rblcmall?createDatabaseIfNotExist=true&useUnicode=true&useUnicode=true&characterEncoding=utf8&autoReconnect=true&verifyServerCertificate=false&useSSL=false&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+    driver-class: com.mysql.jdbc.Driver
+    username: root
+    password:
+    initial-size: 1
+    min-idle: 1
+    max-active: 20
+    test-on-borrow: true
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT 1 FROM DUAL
+    test-While-Idle: true
+    test-on-return: false
+    pool-prepared-statements: false
+    max-pool-prepared-statement-per-connection-size: 20
+    filters: stat,wall,log4j,config
+#    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=false
+#    monitor:
+#          enabled: enabled # 配置此属性Monitor才生效
+#          druid-stat-view: /druid/*
+#          druid-web-stat-filter: /*
+#          allow: 219.230.50.107,127.0.0.1
+#          deny: 219.230.50.108
+#          login-username: admin
+#          login-password: 123456
+#          exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+
+spring:
+    mvc:
+        favicon:
+            enabled: false
+#    redis:
+#        host: localhost
+#        port: 6379
+    jpa:
+        database : MYSQL
+        show-sql : true
+        hibernate:
+            ddl-auto : update
+            cache:
+                region:
+                    factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+        naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+        hibernate:
+            cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+        dialect : org.hibernate.dialect.MySQL5Dialect
+
+    #上传文件大小
+    http:
+        multipart:
+            max-file-size: 500MB
+            max-request-size: 20MB
+
+
+#ueditor的config.json配置，原配置在ueditor资源目录jsp/config.json，拷到此处时请将原json去除掉注释，并压缩为一行，参考 “config纯净版.json”
+#ueditor:
+#  config: {"imageActionName":"uploadimage","imageFieldName":"upfile","imageMaxSize":2048000,"imageAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],"imageCompressEnable":true,"imageCompressBorder":1600,"imageInsertAlign":"none","imageUrlPrefix":"","imagePathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","scrawlActionName":"uploadscrawl","scrawlFieldName":"upfile","scrawlPathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","scrawlMaxSize":2048000,"scrawlUrlPrefix":"","scrawlInsertAlign":"none","snapscreenActionName":"uploadimage","snapscreenPathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","snapscreenUrlPrefix":"","snapscreenInsertAlign":"none","catcherLocalDomain":["127.0.0.1","localhost","img.baidu.com"],"catcherActionName":"catchimage","catcherFieldName":"source","catcherPathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","catcherUrlPrefix":"","catcherMaxSize":2048000,"catcherAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],"videoActionName":"uploadvideo","videoFieldName":"upfile","videoPathFormat":"/ueditor/jsp/upload/video/{yyyy}{mm}{dd}/{time}{rand:6}","videoUrlPrefix":"","videoMaxSize":102400000,"videoAllowFiles":[".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid"],"fileActionName":"uploadfile","fileFieldName":"upfile","filePathFormat":"/ueditor/jsp/upload/file/{yyyy}{mm}{dd}/{time}{rand:6}","fileUrlPrefix":"","fileMaxSize":51200000,"fileAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp",".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid",".rar",".zip",".tar",".gz",".7z",".bz2",".cab",".iso",".doc",".docx",".xls",".xlsx",".ppt",".pptx",".pdf",".txt",".md",".xml"],"imageManagerActionName":"listimage","imageManagerListPath":"/ueditor/jsp/upload/image/","imageManagerListSize":20,"imageManagerUrlPrefix":"","imageManagerInsertAlign":"none","imageManagerAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],"fileManagerActionName":"listfile","fileManagerListPath":"/ueditor/jsp/upload/file/","fileManagerUrlPrefix":"","fileManagerListSize":20,"fileManagerAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp",".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid",".rar",".zip",".tar",".gz",".7z",".bz2",".cab",".iso",".doc",".docx",".xls",".xlsx",".ppt",".pptx",".pdf",".txt",".md",".xml"]}
+#    #七牛云存储配置
+#  access-key:
+#  secret-key:
+#  bucket:
+#    #域名，可使用七牛提供的域名，或自己绑定的域名
+#  base-url:
+#    #文件上传到七牛的目录，默认为‘ueditor/file/’，请使用‘/’结尾
+#  upload-dir-prefix: /
+#
+server:
+##  context-path: /webapp
+  port: 8080
+
+
+
+logging:
+    pattern:
+#        console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} [%thread] %-5level %class - %msg%n"
+        console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%logger){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+        #   <property name="CONSOLE_LOG_PATTERN" value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+        #   <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+    level:
+        ROOT: INFO
+        org.apache: ERROR
+        org.apache.http: DEBUG
+        org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader: ERROR
+        org.springframework.web: ERROR
+        org.springframework.security.web.util.matcher: ERROR
+        org.springframework.bean: ERROR
+        org.springframework.context: ERROR
+        org.xnio: ERROR
+        springfox: ERROR
+        io.undertow: ERROR
+        org.hibernate: ERROR
+        org.dozer: ERROR
+        jdbc.connection: OFF
+        jdbc.resultset: OFF
+        jdbc.resultsettable: INFO
+        jdbc.audit: OFF
+        jdbc.sqltiming: OFF
+        jdbc.sqlonly: INFO
+        com.minlia.mit: DEBUG
+        com.minlia.cloud: OFF
+        com.zaxxer.hikari: OFF
+        javax.management: OFF
+        com.minlia: DEBUG
+        org.springframework.cache: DEBUG
+        org.springframework.support: DEBUG
+        org.springframework.context.annotation: ERROR
+        org.springframework.cache.interceptor: DEBUG
+        org.apache.ibatis: DEBUG
+        org.mybatis: DEBUG
+        com.hazelcast: INFO
+        org.aopalliance.intercept: DEBUG
+        org.apache.http.impl.conn: ERROR
+        org.apache.http.wire: ERROR
+

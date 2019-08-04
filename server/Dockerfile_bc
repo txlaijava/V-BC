@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+VOLUME /data/tmp
+ADD server-bc/target/server-bc-1.0.0.RELEASE.jar server-bc.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/server-bc.jar"]
+RUN echo 'Asia/Shanghai' >/etc/timezone

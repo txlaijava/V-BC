@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="canlendarBgView">
+        <view class="canlendarView">
+            <view class="canlendarTopView">
+                <view class="leftBgView" bindtap="handleCalendar" data-handle="prev">
+                    <view class="leftView">《</view>
+                </view>
+                <view class="centerView">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+                <view class="rightBgView" bindtap="handleCalendar" data-handle="next">
+                    <view class="rightView">》</view>
+                </view>
+            </view>
+            <view class="weekBgView">
+                <view class="weekView" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+            </view>
+            <view class="dateBgView">
+                <view wx:if="{{hasEmptyGrid}}" class="dateEmptyView" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+                </view>
+                <view class="dateView" wx:for-items="{{days}}" wx:for-item="item" wx:key="{{item.date}}" data-idx="{{index}}" bindtap="dateSelectAction">
+                    <!-- 如果预订 添加 ordering class -->
+                    <view class="datesView {{ index == selectIndex ? 'dateSelectView' : index == todayIndex ? 'todayView' :  ''}} {{item.isOrder?'ordering':''}} ">{{item.date}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="delete">长按可删除预约记录</view>
+    </view>
+
+    <view class="ordering-lists">
+        <!-- 加列表的时候 添加 animated class -->
+        <!-- <view class="ordering-item" bindlongtap="longTap">2019年5月12日 周四</view>
+        <view class="ordering-item animated" bindlongtap="longTap">2019年5月12日 周四</view> -->
+        <block wx:for="{{dateList}}" wx:key="*this"  wx:for-index="idx">
+            <view class="ordering-item" data-select-id="{{item.id}}" data-select-date="{{item.time}}" data-tip-date="{{item.date}}" bindlongtap="longTap">{{item.date}}</view>
+        </block>
+    </view>
+    <view class="btn-add"  bindtap="addNewReservation">+</view>
+</view>

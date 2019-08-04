@@ -1,0 +1,53 @@
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class="panel-box">
+        <view class="avatar">
+            <image src="{{imgUrl}}" />
+        </view>
+        <view class="cells">
+            <view class="cell field flex">
+                <view class="field__left-icon">
+                    <image src="../../images/icon/icon-user.png" />
+                </view>
+                <view class="cell__value flex-item">
+                    <input type="text" name="name" value="{{form.name}}" placeholder="请填写你的姓名" placeholder-class="placeholder-class" />
+                </view>
+            </view>
+            <view class="cell field flex">
+                <view class="field__left-icon">
+                    <image src="../../images/icon/icon-department.png" />
+                </view>
+                <view class="cell__value flex-item">
+                    <picker name="userDepartmentId" bindchange="bindPickerChange" value="{{array[id].id}}" range-key="{{'name'}}" range="{{array}}">
+                        <input name="userDepartmentName" disabled='true' placeholder="请选择你所在部门" placeholder-class="placeholder-class"
+                         value="{{array[id].name}}" />
+                    </picker>
+                </view>
+            </view>
+            <view class="cell field flex">
+                <view class="field__left-icon">
+                    <image src="../../images/icon/icon-phone.png" />
+                </view>
+                <view class="cell__value flex-item">
+                    <input type='number' name="mobile" value="{{form.mobile}}" placeholder="请填写你的手机号码" placeholder-class="placeholder-class" maxlength="11"  bindinput="getPhone"/>
+                </view>
+                <view class="field__button">
+                    <button bindtap="sendCode" disabled='{{disabled}}'>{{smsText}}</button>
+                </view>
+            </view>
+            <view class="cell field flex">
+                <view class="field__left-icon">
+                    <image src="../../images/icon/icon-safety.png" />
+                </view>
+                <view class="cell__value flex-item">
+                    <input type="number" name="codeNo" value="{{form.codeNo}}" placeholder="请输入验证码" placeholder-class="placeholder-class"  maxlength="6"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="btn-wrap">
+            <button type="primary" form-type="submit">登录</button>
+        </view>
+    </view>
+  </view>
+</form>

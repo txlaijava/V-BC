@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sqlMap>
+    <sqls>
+        <entry>
+            <key>queryVipCoupon</key>
+            <description>查询超级会员优惠券信息</description>
+            <value><![CDATA[
+select * from (
+ select c.id,c.type,c.coupon_name,c.coupon_amount,c.coupon_order_amount,ci.id as info_id,ci.user_id,
+ case when ci.id is null  then  0 else  1 end as state
+ from shopping_store_vip_config_coupon v
+ left join shopping_coupon c on v.coupon_id = c.id
+ left join (select * from shopping_coupon_info ::user_id)as ci on ci.coupon_id = v.coupon_id
+ where v.coupon_id = c.id
+ and v.config_id = (select id from shopping_store_vip_config where store_id=::store_id)
+ )a
+ order by a.state = 0 desc
+
+            ]]></value>
+        </entry>
+    </sqls>
+</sqlMap>

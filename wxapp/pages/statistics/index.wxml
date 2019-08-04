@@ -1,0 +1,50 @@
+<view class="canvas-conter">
+  <view class="tabs flex">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view class="tab {{index == curIndex ? 'tab--active' : ''}}" bindtap="tabClick" id="{{index}}">{{item}}</view>
+    </block>
+  </view>
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+  <cover-view class="pie-text">
+    <cover-view class="pie-subtitle">总报餐人数</cover-view>
+    <cover-view class="pie-title">{{totalNum}}</cover-view>
+  </cover-view>
+  <cover-view class="echart-legend">
+    <block wx:for="{{deptList}}" wx:key="{{item.id}}">
+      <cover-view class="echart-legend__item {{index==selectIndex?'checked':''}}">
+        <cover-view class="echart-legend__item-pageIcon" />
+        <cover-view class="echart-legend__item-text" data-id="{{item.id}}" data-index="{{index}}" bindtap="selectDept">{{item.text}}</cover-view>
+      </cover-view>
+    </block>
+  </cover-view>
+</view>
+
+<view class="table">
+  <view class="th flex">
+    <view class="td flex-item">报餐详情</view>
+  </view>
+  <block wx:if="{{bcRecordList.length!=0}}">
+    <view class="tr flex" wx:for="{{bcRecordList}}" wx:key="*this" data-id="{{item.id}}" data-name="{{item.name}}" data-index="{{index}}" bindtap="hadEat">
+      <view class="td flex">
+        <image class="avatar" src="{{item.avatarurl}}" lazy-load/>
+        <image wx:if="{{item.hadEat==1}}" class="icon-checked" src="/images/icon/icon-check.png" />
+      </view>
+      <view class="td flex-item">
+        <view class="name">{{item.name}}</view>
+        <view class="time">{{item.addTime}}</view>
+      </view>
+      <view class="td">
+        <view class="department">{{item.deptName}}</view>
+        <view class="type {{item.channel=='手动报餐'? 'yellowish':'green'}}">{{item.channel}}</view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="tr">
+      <view class="td flex-item">
+        <image class="empty-img" src="/images/icon/icon-empty.png" />
+        <view class="empty-text">{{emptyText}}</view>
+      </view>
+    </view>
+  </block>
+</view>

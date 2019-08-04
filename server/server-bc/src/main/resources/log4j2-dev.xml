@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="All">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+    </Appenders>
+    <Loggers>
+        <!-- level:日志输出级别，共有8个级别，按照从低到高为：All < Trace < Debug < Info < Warn < Error < Fatal < OFF. -->
+        <Root level="Info">
+            <!-- 控制台输出 -->
+            <AppenderRef ref="STDOUT" level="All"/>
+        </Root>
+        <!-- 禁用xxljob日志 -->
+        <Logger name="com.xxl" level="OFF"
+                additivity="false">
+        </Logger>
+    </Loggers>
+</Configuration>
