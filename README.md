@@ -16,15 +16,18 @@
 
 ## 界面
 ### 小程序界面
+<center class="half">
 <img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG797.jpeg" width="30%"/>
-<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG798.jpeg" width="30%" style="padding-left:3%"/>
-<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG799.jpeg" width="30%" style="padding-left:3%"/>
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG798.jpeg" width="30%" style="padding-left:2%"/>
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG799.jpeg" width="30%" style="padding-left:2%"/>
+</center>
+
 ### 后端管理界面
-![员工](http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E5%91%98%E5%B7%A5.jpg)
-![](http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E9%83%A8%E9%97%A8.jpg)
-![](http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E6%8A%A5%E9%A4%90%E8%AE%B0%E5%BD%95.jpg)
-![](http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E6%8A%A5%E9%A4%90%E7%BB%9F%E8%AE%A1.jpg)
-![](http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE.jpg)
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E5%91%98%E5%B7%A5.jpg" />
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E9%83%A8%E9%97%A8.jpg" />
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E6%8A%A5%E9%A4%90%E8%AE%B0%E5%BD%95.jpg" />
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E6%8A%A5%E9%A4%90%E7%BB%9F%E8%AE%A1.jpg" />
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE.jpg" />
 
 ## 技术栈
 ### 前端
