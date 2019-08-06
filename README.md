@@ -54,5 +54,6 @@
 3. 配置微信授权数据
 
 ## 交流
-使用沟通交流钉钉:
-![](http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG801.jpeg)
+
+使用沟通交流可以加钉钉:
+<img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG801.jpeg" width="200"/>
