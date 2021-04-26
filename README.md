@@ -13,6 +13,7 @@
 * 后台 - 部门管理
 * 后台 - 报餐统计
 * 后台 - 报餐配置
+* 硬件支持 - 扫码核销
 
 ## 界面
 ### 小程序界面
@@ -21,6 +22,9 @@
 <img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG798.jpeg" width="30%" style="padding-left:2%"/>
 <img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/WechatIMG799.jpeg" width="30%" style="padding-left:2%"/>
 </center>
+
+### 第三方硬件 - 就餐码验证是否报餐
+<img src="https://qiniu.rblcmall.com/uPic/2VOPdD.png">
 
 ### 后端管理界面
 <img src="http://rblc.oss-cn-qingdao.aliyuncs.com/other/txl/%E5%91%98%E5%B7%A5.jpg" />
