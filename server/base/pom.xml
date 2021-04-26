@@ -128,7 +128,7 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
-            <version>1.8.3</version>
+            <version>1.9.4</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
